@@ -148,7 +148,11 @@ class: bg-main1
 ### I'm Valéria's student `r emo::ji("heavy_check_mark")`
 
 --
+<<<<<<< HEAD
 ### I'm practicing how to  make cool presentations `r emo::ji("heavy_check_mark")`
+=======
+### I'm practicing how to make cool presentations `r emo::ji("heavy_check_mark")`
+>>>>>>> 254c75af1a4c0656d3a281df75a434c9b66b66a0
 
 --
 ### Teach you how to code in R `r emo::ji("x")` <font size="2"> because I don't know yet</font>
