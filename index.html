@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Use R!</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kelly Hidalgo" />
+    <meta name="date" content="2020-11-19" />
+    <script src="index_files/header-attrs-2.5/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+    <script src="index_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="index_files/xaringanExtra-clipboard-0.2.4/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-clipboard-0.2.4/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"<i class=\"fa fa-times-circle\" style=\"color: #F94144\"><\/i>"})</script>
+    <link href="index_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    <link href="index_files/panelset-0.2.4/panelset.css" rel="stylesheet" />
+    <script src="index_files/panelset-0.2.4/panelset.js"></script>
+    <link href="index_files/xaringanExtra-extra-styles-0.2.4/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="index_files/tile-view-0.2.4/tile-view.css" rel="stylesheet" />
+    <script src="index_files/tile-view-0.2.4/tile-view.js"></script>
+    <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Use R!
+## The potential of R for our projects
+### Kelly Hidalgo
+### Grupo de Ecologia Microbiana e Multi-ômicas
+### 2020-11-19
+
+---
+
+
+&lt;style&gt;
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: red;
+}
+
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.huge .remark-code { /*Change made here*/
+  font-size: 150% !important;
+}
+.tiny .remark-code { /*Change made here*/
+  font-size: 20% !important;
+}
+
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.huge .remark-slide-content { /*Change made here*/
+  font-size: 30 px !important;
+}
+.tiny .remark-slide-content { /*Change made here*/
+  font-size: 7 px !important;
+}
+
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+<style>.panelset{--panel-tab-foreground: honeydew;--panel-tab-background: seagreen;}</style>
+
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(imgs/GEMMHEX.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+---
+class: middle center bg-main1 hide_logo
+
+# First...
+
+--
+
+# Look at this!
+
+--
+
+&lt;img src="imgs/1.png" width="35%"&gt;
+
+--
+
+# It was made with R
+
+---
+
+class: bg-main1
+
+# Why am I here?
+
+--
+### I'm Valéria's student ✔️
+
+--
+### I'm practicing how to make cool presentations ✔️
+
+--
+### Teach you how to code in R ❌ &lt;font size="2"&gt; because I don't know yet&lt;/font&gt;
+--
+
+### Show you *what you can do* with R ✔️ &lt;font size="2"&gt; 10% of total &lt;/font&gt;
+
+--
+### I❤️ R ✔️
+
+--
+### Share with you how I'm learning R ✔️
+
+---
+
+# How Did I start with R?
+
+.center[
+&lt;img src="imgs/pool.gif" width=50%&gt;
+]
+
+---
+
+# How &lt;font color="orange"&gt; should &lt;/font&gt; we learn R?
+
+--
+
+.center[.pull-left[
+
+&lt;img src="imgs/youtube.png" width=35%&gt;
+
+
+&lt;img src="imgs/stack.png" width=35%&gt;
+
+
+&lt;img src="imgs/github.png" width=35%&gt;
+]
+]
+
+.center[.pull-right[
+&lt;img src="imgs/twitter.png" width=35%&gt; 
+
+
+&lt;img src="imgs/bookr.jpeg" width=40%&gt;
+]
+]
+---
+
+# How I'm learning R?
+
+--
+
+### - Hands on!
+--
+
+### - I see a lot of videos on Youtube
+
+--
+
+### - I practice with scripts written for someone else
+
+--
+
+### - Some free and not free courses
+
+--
+
+### - Following and joining R communities, like &lt;img src="imgs/rladies.png" width=10%&gt;
+
+--
+
+### - Actually, I do &lt;font color= "green"&gt; **EVERYTHING** &lt;/font&gt; in R &lt;font size="2"&gt; (this slides for example) &lt;/font&gt;
+
+---
+
+# How I'm learning R?
+
+### - Being &lt;font color= "green"&gt; **PATIENT** &lt;/font&gt; ![Saw](https://media.giphy.com/media/6xcqPF9MTwChq/giphy.gif)
+
+.center[
+![Saw](https://media.giphy.com/media/ifdPjn6m4WyNlnXMTj/giphy.gif)
+]
+
+---
+class: center, middle, inverse
+
+# Why use/learn R? 
+&lt;font size="2"&gt; (that I know at this time!) &lt;/font&gt;
+
+---
+
+### - Free and Open-source language 
+
+.center[
+![](https://media.giphy.com/media/j1mDtZr79HqViJ4oim/giphy.gif)
+]
+
+---
+
+### - Free and Open-source language
+
+### - Large community of Users
+--
+
+### - Great visualizations - Graphs &lt;font color= "green"&gt; ready-to-print &lt;/font&gt;
+--
+
+### - Advanced Statistical Language
+
+--
+
+### - Used in almost every area
+
+--
+
+### - Big Data (Large dataset)
+
+---
+class: center, middle
+
+### - MONEY!
+
+.center[
+![](https://media.giphy.com/media/3o6gDWzmAzrpi5DQU8/giphy.gif)
+]
+
+---
+
+### Why  &lt;img src="imgs/rlogo.jpeg" width=10%&gt; is better than &lt;img src="imgs/excellogo.png" width=7%&gt;?
+
+--
+
+#### 1. Data manipulation
+
+--
+
+#### 2. Easier automation
+
+--
+
+#### 3. Faster computation
+
+--
+
+#### 4. It reads any type of data
+
+--
+
+#### 5. Easier project organization
+
+--
+
+#### 6. It supports larger data sets
+
+--
+
+#### 7. Reproducibility
+
+--
+
+#### 8. Accuracy
+
+--
+
+#### 9. Easier to find and fix errors
+
+--
+
+#### 10. It's free and open source
+
+
+---
+
+### Why  &lt;img src="imgs/rlogo.jpeg" width=10%&gt; is better than &lt;img src="imgs/excellogo.png" width=7%&gt;?
+
+--
+
+#### 11. Advanced Statistics
+
+--
+
+#### 12. More beaupngul and printable graphs
+
+--
+
+#### 13. It runs on many platforms
+
+--
+
+#### 14. Anyone can contribute to improve
+
+---
+
+### Why  &lt;img src="imgs/rlogo.jpeg" width=10%&gt; is better than &lt;img src="imgs/excellogo.png" width=7%&gt;?
+
+.center[
+&lt;img src="imgs/excelvsr.png" width=60%&gt;
+]
+
+---
+
+class: center, middle, inverse
+
+# But...
+
+--
+# Which it is the potential of R for our projects? 
+&lt;font size="2"&gt; (that I know at this time!) &lt;/font&gt;
+
+---
+class: middle, center, hide_logo
+background-image: url("imgs/microbiome.jpeg")
+background-size: cover
+
+&lt;font color= "red", font size = "15"&gt; Microbiome analysis with: &lt;/font&gt;
+
+.center[
+&lt;img src="imgs/phyloseqsticker.png" width=20%&gt; &lt;img src="imgs/ggplot2 (1).png" width=20%&gt;
+]
+
+---
+class: middle, center
+
+### You can use the *Qiime2* outputs to form a &lt;font color= "dark yellow"&gt; phyloseq object... &lt;/font&gt;
+
+.center[
+&lt;img src="imgs/phyloseq.png" width=100%&gt;
+]
+
+### ... and then doing &lt;font color= "blue"&gt; a lot of data processing, or data transformations and off course a lot of analysis &lt;/font&gt;
+
+---
+class: inverse, center, middle
+
+#Some examples
+
+---
+
+### Important functions:
+
+.panelset[
+.panel[.panel-name[Accessors]
+
+- How many samples are there? `nsamples()`
+
+
+- How many taxas are there? `ntaxa()`
+
+
+- Which are the variables of your study? `sample_variables()`
+
+
+- How many sequences are there in each sample? `sample_sums()`
+
+
+- And so on...
+]
+
+
+.panel[.panel-name[Processors]
+
+- Are you interested in specific phylum (class, order, etc)? `subset_taxa()`
+  
+  For example only Firmicutes phylum
+
+- Are you interested in the taxonomic classification only until family? `tax_glom()`
+
+- Are you interested in specific group of samples? `subset_samples()`
+  
+  For example only samples from local A
+
+- Do you want filter the samples? `prune_samples()`
+  
+  For example only the first 20 samples.
+
+]
+
+
+.panel[.panel-name[Manipulating]
+
+- Do you wnat to rarefy to the smallest sample? `rarefy_even_depth()`
+
+- Do you want normalizing your dataset to relative abundance? `transform_sample_counts()`
+
+]
+]
+---
+class: center, middle, inverse
+
+# Exploratory analysis
+
+---
+
+## Alpha diversity
+
+.panelset[
+.panel[.panel-name[BoxPlot]
+
+
+&lt;img src="imgs/2.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+You can plot the alpha diversity indexes as a box plot
+]
+
+.panel[.panel-name[DotPlot]
+.center[
+&lt;img src="imgs/dotplot.png" width=90%&gt;
+]
+
+Or as a dot plot.
+]
+
+.panel[.panel-name[Table]
+
+
+&lt;table class=" lightable-classic lightable-hover table" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 9px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;font-weight: bold;"&gt; X &lt;/th&gt;
+   &lt;th style="text-align:right;font-weight: bold;"&gt; Observed &lt;/th&gt;
+   &lt;th style="text-align:right;font-weight: bold;"&gt; Chao1 &lt;/th&gt;
+   &lt;th style="text-align:right;font-weight: bold;"&gt; se.chao1 &lt;/th&gt;
+   &lt;th style="text-align:right;font-weight: bold;"&gt; Shannon &lt;/th&gt;
+   &lt;th style="text-align:right;font-weight: bold;"&gt; Simpson &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2420.1.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.910587 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9311451 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2420.1.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.138456 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9456109 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2420.1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.148694 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9352106 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2420.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.477656 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9651143 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2420.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.451550 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9642658 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2462.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.181441 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9401084 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2462.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.734510 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9160617 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2462.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.119220 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9396284 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2687.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.176438 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9497495 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2687.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 27 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 27 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.972910 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9367150 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2687.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.371845 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9554562 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2838.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.869501 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9307532 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2838.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.624246 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9118242 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ2838.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.484743 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.8879484 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; BAQ3473.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.292579 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9354833 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.panel[.panel-name[Rarefaction Curves]
+
+
+.center[
+&lt;img src="imgs/rarefactioncurves.png" width=90%&gt;
+]
+]
+]
+---
+
+## Beta diversity `plot_ordination()`
+
+.panelset[
+.panel[.panel-name[Samples]
+.center[
+&lt;img src="imgs/mdsdistancia.png" width=90%&gt;
+]
+
+You can plot different distance metrics, like Bray-Curtis, Jaccard, Unifrac, and many others...
+]
+
+
+.panel[.panel-name[Samples and Taxas]
+
+And if you want plot the ordination of your samples and your taxa?
+
+.center[
+&lt;img src="imgs/split.png" width=85%&gt;
+]
+
+Here you can associate the phyla with the samples
+]
+]
+
+---
+
+## Community composition
+
+.panelset[
+.panel[.panel-name[BarPlots]
+
+.center[.pull-right[
+&lt;img src="imgs/barplot_phylum_liners.png" width=100%&gt; 
+]]
+.center[.pull-left[
+&lt;img src="imgs/barplot_phylum_all.png" width=100%&gt;
+]
+]
+]
+
+
+.panel[.panel-name[Heatmaps]
+.center[
+&lt;img src="imgs/heatmap.png" width=90%&gt;
+]
+]
+
+.panel[.panel-name[Clustering Heatmaps]
+.center[
+&lt;img src="imgs/family_heatmap.png" width=80%&gt;
+]
+]
+
+
+.panel[.panel-name[InteractivePlots]
+#### Krona
+
+.center[
+&lt;img src="imgs/kronavideo.gif" width=90%&gt;
+]
+]
+
+.panel[.panel-name[WordClouds]
+
+.center[
+ &lt;img src="imgs/wordcloud.png" width = 50%&gt;
+]
+]
+]
+
+---
+
+## Other graphs types
+
+.panelset[
+.panel[.panel-name[TernaryPlot]
+
+.center[
+&lt;img src="imgs/ternary.png" width=80%&gt; 
+]
+]
+
+
+.panel[.panel-name[TreeMap]
+.center[
+&lt;img src="imgs/treemap_spec_total.png" width=100%&gt;
+]
+]
+
+.panel[.panel-name[Upset Plot]
+.center[
+&lt;img src="imgs/FigS6.png" width=60%&gt;
+]
+]
+]
+
+---
+class: center, middle, inverse
+
+# Now, Can you imagine how you could do  all this in Excel?
+
+.center[
+&lt;img src= "https://media.giphy.com/media/26gR0YFZxWbnUPtMA/giphy.gif"&gt;
+]
+
+---
+class: middle
+
+## Which is more suitable for printing?
+
+.center[.pull-left[
+### This 
+
+&lt;img src="imgs/excel1.png" width=100%&gt; 
+]
+]
+.center[.pull-right[
+### or this?
+&lt;img src="imgs/FigS4.png" width=100%&gt;
+]
+]
+---
+class: middle
+
+## Time to open...
+
+.center[.pull-left[
+### This ...
+&lt;img src="imgs/openinexcel.gif" width=100%&gt;
+]
+]
+
+#### 1 minute and 20 seconds
+
+.center[.pull-right[
+&lt;img src="https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif" width=80%&gt;
+]
+]
+---
+class: middle
+
+### or this?
+.center[.pull-left[
+&lt;img src="imgs/openr.gif" width=100%&gt;
+]
+]
+
+#### 20 seconds
+
+
+.center[.pull-right[
+&lt;img src="https://media.giphy.com/media/B1uajA01vvL91Urtsp/giphy.gif" width=80%&gt;
+]
+]
+
+---
+class: center, middle, inverse
+
+
+# Let's learn how to make a simple barplot
+
+---
+
+
+
+## Phyloseq Object
+
+
+```r
+library(phyloseq)
+physeq
+```
+
+```
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 1082 taxa and 54 samples ]
+sample_data() Sample Data:       [ 54 samples by 22 sample variables ]
+tax_table()   Taxonomy Table:    [ 1082 taxa by 7 taxonomic ranks ]
+phy_tree()    Phylogenetic Tree: [ 1082 tips and 1076 internal nodes ]
+```
+#### We have a phyloseq object called "physeq" that has 54 samples, 1082 different taxa in 7 taxonomic ranks. 
+---
+
+
+```r
+sample_sums(physeq)
+```
+
+```
+BAQ2420.1.1 BAQ2420.1.2 BAQ2420.1.3   BAQ2420.2   BAQ2420.3   BAQ2462.1 
+        733         831         881        1027         962        1397 
+  BAQ2462.2   BAQ2462.3   BAQ2687.1   BAQ2687.2   BAQ2687.3   BAQ2838.1 
+        866         728         944        1219        1037         481 
+  BAQ2838.2   BAQ2838.3   BAQ3473.1   BAQ3473.2   BAQ3473.3 BAQ4166.1.1 
+        438         342        1298         983        1900         942 
+BAQ4166.1.2 BAQ4166.1.3   BAQ4166.2   BAQ4166.3   BAQ4697.1   BAQ4697.2 
+       1559        1306        1305        1540        1782        1512 
+  BAQ4697.3 YUN1005.1.1   YUN1005.3   YUN1242.1   YUN1242.3   YUN1609.1 
+       2080        1978        1031        1470        1557        1384 
+  YUN2029.2   YUN3153.2   YUN3153.3 YUN3259.1.1 YUN3259.1.2 YUN3259.1.3 
+       1969         827        1112          28        1041         383 
+  YUN3259.2   YUN3259.3   YUN3346.1   YUN3346.2   YUN3346.3   YUN3428.1 
+        921        1352        1200         141        1125        1162 
+  YUN3428.2   YUN3428.3 YUN3533.1.1 YUN3533.1.2 YUN3533.1.3   YUN3533.2 
+       1914        1101        1363         920        1125        1987 
+  YUN3533.3 YUN3856.1.1 YUN3856.1.2 YUN3856.1.3   YUN3856.2   YUN3856.3 
+       1662         930        1624        1284        1249        1720 
+```
+
+---
+
+#### We have to convert the frequences values (or hits) in relative abundance
+
+
+```r
+count_to_prop &lt;- function(x) {return (x / sum (x))}
+transf_physeq &lt;- transform_sample_counts(physeq, count_to_prop)
+sample_sums(transf_physeq)
+```
+
+```
+BAQ2420.1.1 BAQ2420.1.2 BAQ2420.1.3   BAQ2420.2   BAQ2420.3   BAQ2462.1 
+          1           1           1           1           1           1 
+  BAQ2462.2   BAQ2462.3   BAQ2687.1   BAQ2687.2   BAQ2687.3   BAQ2838.1 
+          1           1           1           1           1           1 
+  BAQ2838.2   BAQ2838.3   BAQ3473.1   BAQ3473.2   BAQ3473.3 BAQ4166.1.1 
+          1           1           1           1           1           1 
+BAQ4166.1.2 BAQ4166.1.3   BAQ4166.2   BAQ4166.3   BAQ4697.1   BAQ4697.2 
+          1           1           1           1           1           1 
+  BAQ4697.3 YUN1005.1.1   YUN1005.3   YUN1242.1   YUN1242.3   YUN1609.1 
+          1           1           1           1           1           1 
+  YUN2029.2   YUN3153.2   YUN3153.3 YUN3259.1.1 YUN3259.1.2 YUN3259.1.3 
+          1           1           1           1           1           1 
+  YUN3259.2   YUN3259.3   YUN3346.1   YUN3346.2   YUN3346.3   YUN3428.1 
+          1           1           1           1           1           1 
+  YUN3428.2   YUN3428.3 YUN3533.1.1 YUN3533.1.2 YUN3533.1.3   YUN3533.2 
+          1           1           1           1           1           1 
+  YUN3533.3 YUN3856.1.1 YUN3856.1.2 YUN3856.1.3   YUN3856.2   YUN3856.3 
+          1           1           1           1           1           1 
+```
+As you can se now, all the samples sums are 1
+
+---
+
+## Now, we're going to plot
+
+.center[.pull-left[
+
+```r
+library(ggplot2)
+plot_bar(transf_physeq, fill = "Phylum")
+```
+
+![](index_files/figure-html/barplot1.2-1.png)&lt;!-- --&gt;
+]
+]
+
+.center[.pull-right[
+This is the simplest barplot, but you can customize &lt;font color="red"&gt; ALL &lt;/font&gt; the elements of the graph
+]
+]
+---
+class: hide_logo
+
+.panelset[
+.panel[.panel-name[CODE]
+
+```r
+plot_bar(transf_physeq, fill = "Phylum") + 
+  facet_wrap(~transect.name, scales = "free_x", nrow = 1) +  # here you can grouped by some characteristic of your data
+  geom_bar(aes(color=Phylum, fill=Phylum), stat="identity", position="stack") +
+  theme(axis.title.y = element_text(size = 16, face = "bold", color = "red")) +
+  theme(axis.title.x = element_blank()) +
+  theme(axis.ticks = element_line(color = "blue")) +
+  theme(axis.text.x = element_text(angle = 90, size = 7, vjust = 0.3, hjust = 0)) +
+  theme(axis.text.y = element_text(size = 14, face = "italic", color = "purple")) +
+  theme(strip.background = element_rect(color = "green", fill = "green")) +
+  theme(strip.text = element_text(color = "orange", face = "bold")) +
+  theme(legend.title = element_text(face = "bold", size = 16)) +
+  theme(legend.text = element_text(face = "italic"))
+```
+]
+
+.panel[.panel-name[PLOT]
+
+#### Voilà!
+.center[.pull-left[
+![](index_files/figure-html/barplot2-1.png)&lt;!-- --&gt;
+]
+]
+
+.center[.pull-right[
+##UGLY!
+]
+]
+]
+]
+
+---
+
+## Bonus
+
+&lt;font color= "blue"&gt; I want hue! &lt;/font&gt; is a webpage where you can construct your own palette colors
+
+.center[
+&lt;img src="imgs/colors.gif", width = 100%&gt;
+]
+
+---
+
+## Let's change the palette colors
+
+.panelset[
+.panel[.panel-name[CODE]
+
+```r
+colors26 &lt;- c("#d2414d", "#48c475", "#cf46a9", "#80bf42", "#7662d6", "#429735", "#cd75de", "#bcaf3d", "#9544a9", "#9cb169", "#4b78d0", "#dc953b", "#629fd6", "#d7562e", "#43c4c6", "#de4c83",
+"#5ab68e", "#a0477b", "#367b4c", "#d68ec5", "#677629", "#806db3", "#937334", "#a9515f",
+"#a7592f", "#e5917a")
+
+plot_bar(transf_physeq, fill = "Phylum") + 
+  facet_wrap(~transect.name, scales = "free_x", nrow = 1) +  # here you can grouped by some characteristic of your data
+  geom_bar(aes(), stat="identity", position="stack") +
+  theme(axis.title.y = element_text(size = 16, face = "bold", color = "red")) +
+  theme(axis.title.x = element_blank()) +
+  theme(axis.ticks = element_line(color = "blue")) +
+  theme(axis.text.x = element_text(angle = 90, size = 7, vjust = 0.3, hjust = 0)) +
+  theme(axis.text.y = element_text(size = 14, face = "italic", color = "purple")) +
+  theme(strip.background = element_rect(color = "green", fill = "green")) +
+  theme(strip.text = element_text(color = "orange", face = "bold")) +
+  theme(legend.title = element_text(face = "bold", size = 16)) +
+  theme(legend.text = element_text(face = "italic")) +
+  scale_fill_manual(values = colors26)
+```
+]
+
+.panel[.panel-name[PLOT]
+![](index_files/figure-html/barplot10-1.png)&lt;!-- --&gt;
+]
+]
+
+---
+class: center, middle, inverse
+
+# That's all! 
+
+--
+
+#### All this slides was coding using R and &lt;img src="imgs/xaringan.png" width=10%&gt; 
+
+--
+
+# Gracias!
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>`\n",
+"highlightStyle": "github",
+"highlightLines": true,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
