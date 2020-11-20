@@ -109,12 +109,12 @@ xaringanExtra::use_extra_styles(
 
 ```{r setup, include=FALSE, echo=FALSE}
 require("knitr")
-opts_knit$set(root.dir = "~/Google Drive File Stream/Mi unidad/GitHub/UseR")
+opts_knit$set(root.dir = "~/Google Drive File Stream/Mi unidad/GitHub/UserR/docs")
 ```
 
 
 ```{r use-logo, echo=FALSE}
-xaringanExtra::use_logo("imgs/GEMMHEX.png")
+xaringanExtra::use_logo("imgs/1.png")
 ```
 
 ```{r xaringan-tile-view, echo=FALSE}
@@ -164,7 +164,7 @@ class: bg-main1
 
 ---
 
-# How Did I start with R?
+# How Did I started with R?
 
 .center[
 <img src="imgs/pool.gif" width=50%>
