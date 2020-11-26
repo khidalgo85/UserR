@@ -150,7 +150,7 @@ class: bg-main1
 
 --
 
-### I'm practicing how to  make cool presentations `r emo::ji("heavy_check_mark")`
+### I'm practicing how to make cool presentations `r emo::ji("heavy_check_mark")`
 
 --
 
@@ -205,14 +205,14 @@ class: bg-main1
 ]
 ---
 
-# How I'm learning R?
+# How am I learning R?
 
 --
 
 ### - Hands on!
 --
 
-### - I see a lot of videos on Youtube
+### - I see a lot of Youtube videos
 
 --
 
@@ -232,9 +232,10 @@ class: bg-main1
 
 ---
 
-# How I'm learning R?
+# How am I learning R?
 
-### - Being <font color= "green"> **PATIENT** </font> ![Saw](https://media.giphy.com/media/6xcqPF9MTwChq/giphy.gif)
+### - Being <font color= "green"> **PATIENT** </font>
+![Saw](https://media.giphy.com/media/6xcqPF9MTwChq/giphy.gif)
 
 .center[
 ![Saw](https://media.giphy.com/media/ifdPjn6m4WyNlnXMTj/giphy.gif)
@@ -243,16 +244,8 @@ class: bg-main1
 ---
 class: center, middle, inverse
 
-# Why use/learn R? 
+# Why should you use/learn R? 
 <font size="2"> (that I know at this time!) </font>
-
----
-
-### - Free and Open-source language 
-
-.center[
-![](https://media.giphy.com/media/j1mDtZr79HqViJ4oim/giphy.gif)
-]
 
 ---
 
@@ -338,7 +331,7 @@ class: center, middle
 
 --
 
-#### 12. More beaupngul and printable graphs
+#### 12. More beautiful and printable graphs
 
 --
 
@@ -363,7 +356,7 @@ class: center, middle, inverse
 # But...
 
 --
-# Which it is the potential of R for our projects? 
+# Which is the potential it of R for our projects? 
 <font size="2"> (that I know at this time!) </font>
 
 ---
@@ -428,7 +421,7 @@ class: inverse, center, middle
   
   For example only samples from local A
 
-- Do you want filter the samples? `prune_samples()`
+- Do you want to filter the samples? `prune_samples()`
   
   For example only the first 20 samples.
 
@@ -437,9 +430,9 @@ class: inverse, center, middle
 
 .panel[.panel-name[Manipulating]
 
-- Do you wnat to rarefy to the smallest sample? `rarefy_even_depth()`
+- Do you want to rarefy to the smallest sample? `rarefy_even_depth()`
 
-- Do you want normalizing your dataset to relative abundance? `transform_sample_counts()`
+- Do you want to normalize your dataset to relative abundance? `transform_sample_counts()`
 
 ]
 ]
@@ -510,7 +503,7 @@ You can plot different distance metrics, like Bray-Curtis, Jaccard, Unifrac, and
 
 .panel[.panel-name[Samples and Taxas]
 
-And if you want plot the ordination of your samples and your taxa?
+And if you want to plot the ordination of your samples and your taxa?
 
 .center[
 <img src="imgs/split.png" width=85%>
@@ -595,7 +588,7 @@ Here you can associate the phyla with the samples
 ---
 class: center, middle, inverse
 
-# Now, Can you imagine how you could do  all this in Excel?
+# Now, Can you imagine how you could do all this in Excel?
 
 .center[
 <img src= "https://media.giphy.com/media/26gR0YFZxWbnUPtMA/giphy.gif">
@@ -690,14 +683,14 @@ sample_sums(physeq)
 
 ---
 
-#### We have to convert the frequences values (or hits) in relative abundance
+#### We have to convert the frequency values (or hits) in relative abundance
 
 ```{r transform, eval= TRUE}
 count_to_prop <- function(x) {return (x / sum (x))}
 transf_physeq <- transform_sample_counts(physeq, count_to_prop)
 sample_sums(transf_physeq)
 ```
-As you can se now, all the samples sums are 1
+As you can see now, all the samples sums are 1
 
 ---
 
@@ -768,7 +761,7 @@ plot_bar(transf_physeq, fill = "Phylum") +
 
 ## Bonus
 
-<font color= "blue"> I want hue! </font> is a webpage where you can construct your own palette colors
+<font color= "blue"> I want hue! </font> is a webpage where come up with pallet of colors
 
 .center[
 <img src="imgs/colors.gif", width = 100%>
@@ -776,7 +769,7 @@ plot_bar(transf_physeq, fill = "Phylum") +
 
 ---
 
-## Let's change the palette colors
+## Let's change the palette of colors
 
 .panelset[
 .panel[.panel-name[CODE]
@@ -832,7 +825,7 @@ class: center, middle, inverse
 
 --
 
-#### All this slides was coding using R and <img src="imgs/xaringan.png" width=10%> 
+#### All these slides were coding using R and <img src="imgs/xaringan.png" width=10%> 
 
 --
 
