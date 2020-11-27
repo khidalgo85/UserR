@@ -154,10 +154,6 @@ class: bg-main1
 
 --
 
-### I'm practicing how to make cool presentations `r emo::ji("heavy_check_mark")`
-
---
-
 ### Teach you how to code in R `r emo::ji("x")` <font size="2"> because I don't know yet</font>
 
 --
@@ -251,7 +247,10 @@ class: center, middle, inverse
 
 ### - Free and Open-source language
 
+--
+
 ### - Large community of Users
+
 --
 
 ### - Great visualizations - Graphs <font color= "green"> ready-to-print </font>
